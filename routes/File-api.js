@@ -2,8 +2,7 @@ var mongoose = require('mongoose');
 const express = require("express")
 const router = express.Router()
 var Grid = require('gridfs-stream');
-const cors = require("cors");
-router.use(cors())
+
 
 
 let gfs,bucket

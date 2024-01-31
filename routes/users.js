@@ -4,11 +4,11 @@ const User = require("../models/User")
 const router = express.Router()
 const  Users = require("../models/Converstion")
 const Massage = require("../models/Massage")
-const cors = require("cors");
+
 require("../mongodb/db")
 router.use(bodyParser.json());
 
-router.use(cors())
+
 
 
 router.get('/favicon.ico', function (req, res) {
