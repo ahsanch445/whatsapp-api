@@ -9,15 +9,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const cors = require("cors")
 var app = express();
-const corsOptions = {
-  origin: 'https://what-app-sand.vercel.app', // Replace with your frontend domain
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,
-  optionsSuccessStatus: 204,
-};
-
-router.use(cors(corsOptions));
-
+app.options('*', cors(corsOptions));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
