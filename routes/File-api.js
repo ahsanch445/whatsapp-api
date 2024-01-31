@@ -2,17 +2,10 @@ var mongoose = require('mongoose');
 const express = require("express")
 const router = express.Router()
 var Grid = require('gridfs-stream');
-const cors = require("cors")
+
 
 let gfs,bucket
-const corsOptions = {
-  origin: 'https://what-app-sand.vercel.app', // Replace with your frontend domain
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,
-  optionsSuccessStatus: 204,
-};
 
-router.use(cors(corsOptions));
 
 const conn = mongoose.connection;
 conn.once('open', function () {
