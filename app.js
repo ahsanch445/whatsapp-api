@@ -18,7 +18,7 @@ app.use((req, res, next) => {
 });
 
 
-app.use(cors())
+app.use(cors("https://what-app-sand.vercel.app/Upload/File"))
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
