@@ -1,9 +1,7 @@
 {
    "version": 2,
    "name": "whatsapp",
-   "resolutions": {
-     "multer-gridfs-storage/mongodb": "^5.9.1"
-   },
+   
    "builds": [
      { "src": "app.js", "use": "@vercel/node" }
    ],
