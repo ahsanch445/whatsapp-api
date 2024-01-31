@@ -3,7 +3,14 @@ const multer = require("multer");
 const router = express.Router();
 const cors = require("cors")
 const { GridFsStorage } = require('multer-gridfs-storage');
+const corsOptions = {
+  origin: 'https://what-app-sand.vercel.app', // Replace with your frontend domain
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+  optionsSuccessStatus: 204,
+};
 
+router.use(cors(corsOptions));
 
 const storage = new GridFsStorage({
   url: "mongodb://ahsanch:ahsanch@ac-wq8q6z9-shard-00-00.iueoiik.mongodb.net:27017,ac-wq8q6z9-shard-00-01.iueoiik.mongodb.net:27017,ac-wq8q6z9-shard-00-02.iueoiik.mongodb.net:27017/ahsan?ssl=true&replicaSet=atlas-yh7jn7-shard-0&authSource=admin&retryWrites=true&w=majority",
