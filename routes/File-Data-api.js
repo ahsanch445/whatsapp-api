@@ -30,7 +30,7 @@ const upload = multer({ storage });
 
 router.post("/Upload/Files", upload.single("file"), (req, res) => {
 
-  const img = "https://localhost:3000";
+  const img = "https://whatsapp-api-khaki.vercel.app/";
   const imgUrl = `${img}/file/${req.file.filename}`;
   
   console.log("File uploaded successfully:", imgUrl);
